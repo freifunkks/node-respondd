@@ -142,7 +142,7 @@ function getMeshAddresses() {
 }
 
 function getNodeId() {
-  return getPrimaryMac().replace(/:/g,"")
+  return getPrimaryMac()
 }
 
 function getPrimaryMac() {
