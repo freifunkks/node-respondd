@@ -50,7 +50,6 @@ function getNodeinfo() {
 
 function getStatistics() {
   return {
-    "traffic": getTrafficStats(),
     "memory": {
       "total": os.totalmem(),
       "free": os.freemem()
