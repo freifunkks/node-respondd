@@ -50,6 +50,7 @@ function getNodeinfo() {
 
 function getStatistics() {
   return {
+    "traffic": getTrafficStats(),
     "memory": {
       "total": os.totalmem(),
       "free": os.freemem()
@@ -112,7 +113,7 @@ function getTrafficStats() {
       var val = parseInt(x[1].trim())
       if (group.indexOf("_bytes") > -1) {
         group = group.substring(0,group.length-6)
-        type = "bytes"
+        type = "bits"
       }
       if (group.indexOf("_dropped") > -1) {
         group = group.substring(0,group.length-8)
